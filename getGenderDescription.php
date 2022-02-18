@@ -1,12 +1,14 @@
 <?php
 
 // определение возрастно-полового состава
-function getGenderDescription($array) {
+function getGenderDescription($array) 
+{
     $lenghtArray = count($array);
     $male = 0;
     $female = 0;
     $neuter = 0;
     $i = 0;
+
     foreach ($array as $arr) {
         switch (getGenderFromName($array[$i]['fullname'])) {
             case 1: $male ++; break;
@@ -25,4 +27,4 @@ function getGenderDescription($array) {
     Мужчины - $male %<br>
     Женщины - $female %<br>
     Не удалось определить - $neuter %";
-};
+}
